@@ -1,0 +1,20 @@
+{
+  "name": "activities_component",
+  "repo": "dmcmillen/activities_component",
+  "description": "",
+  "version": "0.0.1",
+  "keywords": [],
+  "dependencies": {
+    "component/moment": "*"
+  },
+  "development": {},
+  "license": "MIT",
+  "main": "index.js",
+  "scripts": [
+    "index.js",
+    "activity.js",
+    "task.js",
+    "event.js"
+  ],
+  "remotes": []
+}

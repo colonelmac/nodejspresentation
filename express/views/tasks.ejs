@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>index</title>
+    
+    <script src="/javascripts/build.js"></script>
+    <script>
+        var activities = require('activities_component'), 
+            Task = activities.Task, 
+            tasks = JSON.parse('<%- tasks %>');
+        
+        // Bind the prototype onto these objects
+        tasks.forEach(function (task) {
+            task.__proto__ = Task.prototype;     
+        }); 
+    </script>
+</head>
+<body>
+
+    <h1>Hello, <%= currentUser %>!</h1>
+    
+</body>
+</html>
