@@ -24,6 +24,14 @@ var server = http.createServer(function (request, response) {
 
             util.pump(fileStream, response); 
         });
+
+        function foo (cb) {
+            setTimeout(cb, 0);    
+        }
+    
+        MySQL.query('select * foo', function (err, foos) {
+            write(foos);    
+        });
     }
     else {
         response.writeHead(200, { 'Content-Type': 'text/html; charset=UTF-8' });
